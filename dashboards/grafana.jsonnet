@@ -10,6 +10,7 @@ local var = grafana.dashboard.variable;
 local salles = var.custom.new('salles', ['8d120','8d121']);
 local devices = var.custom.new("devices",['8d120-1','8d120-2','8d121-1','8d121-2']);
 
+# On crée un nouveau dashboard
 dashboard.new("IoT")
 + dashboard.withVariables([
     salles,
@@ -17,6 +18,8 @@ dashboard.new("IoT")
 ])
 + dashboard.withRefresh('10s')
 + dashboard.withPanels([
+
+    # On définit le panel pour afficher la consigne
     gauge.new("Setpoint")
     + gauge.panelOptions.withTitle("Setpoint")
     + gauge.datasource.withType("influxdb")
@@ -33,6 +36,7 @@ dashboard.new("IoT")
     ])
     + gauge.panelOptions.withGridPos(5, 12, 0, 0),
 
+    # On définit le panel pour afficher la température du capteur
     gauge.new("Temperature")
     + gauge.panelOptions.withTitle("Temperature")
     + gauge.datasource.withType("influxdb")
@@ -49,6 +53,7 @@ dashboard.new("IoT")
     ])
     + gauge.panelOptions.withGridPos(5, 12, 12, 0),
 
+    # On définit le graphe
     timeSeries.new("Graphe")
     + timeSeries.panelOptions.withTitle("Graphe")
     + timeSeries.datasource.withType("influxdb")
