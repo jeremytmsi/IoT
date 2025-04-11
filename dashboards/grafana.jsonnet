@@ -16,6 +16,7 @@ dashboard.new("IoT")
     salles,
     devices
 ])
++ dashboard.withTimezone("Europe/Paris")
 + dashboard.withRefresh('10s')
 + dashboard.withPanels([
 

@@ -1,5 +1,9 @@
 # IoT
 
+Schéma du projet :
+
+![](./schema.png)
+
 Pour initialiser le projet :
 
 ```bash

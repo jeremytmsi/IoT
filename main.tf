@@ -13,6 +13,7 @@ terraform {
 
 # On définit le provider pour Grafana
 provider "grafana" {
+  # L'URL est à remplacer selon votre besoin
   url  = "http://192.168.141.91:3000"
   auth = "${var.grafana_api_token}"
 }
