@@ -4,6 +4,10 @@ Schéma du projet :
 
 ![](./schema.png)
 
+Flux Node Red :
+
+![](./flux_nodered.png)
+
 Pour initialiser le projet :
 
 ```bash
