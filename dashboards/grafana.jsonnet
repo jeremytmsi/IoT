@@ -3,6 +3,8 @@ local grafana = import 'github.com/grafana/grafonnet/gen/grafonnet-latest/main.l
 local dashboard = grafana.dashboard;
 local gauge = grafana.panel.gauge;
 local timeSeries = grafana.panel.timeSeries;
+
+# UID de la base InfluxDB à modifier pour que cela corresponde à celle de votre base
 local influxdb_uid = "_uAwS2THz";
 
 local var = grafana.dashboard.variable;
